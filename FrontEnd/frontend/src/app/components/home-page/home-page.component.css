@@ -1,0 +1,28 @@
+body {
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  margin: 75px 300px 50px 300px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  background-color: #050735;
+  color: #D4D4DA;
+  font-size: 35px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.24), 0 10px 25px 0 rgba(0,0,0,0.19);
+  background-color: #0F9FEF;
+}
+
+i {
+  display: block;
+  margin-bottom: 10px;
+}

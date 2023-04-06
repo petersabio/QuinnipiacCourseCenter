@@ -1,0 +1,23 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.float-child {
+  height: 800px;
+  background: #050735;
+  padding: 25px;
+}
+
+.float-child:first-child {
+  margin-right: 10px;
+}
+
+h1, h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #0F9FEF;
+  margin-bottom: 5px;
+}
+
+
