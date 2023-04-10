@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { courseService } from './service/course-service.service';
 import { CourseListComponent } from './components/course-list/course-list.component';
 import { FormsModule } from '@angular/forms';
+import { CourseSearchFormComponent } from './components/course-catalog-page/course-search-form/course-search-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     LoginPageComponent,
     CourseCatalogPageComponent,
     MessagingCenterPageComponent,
-    AdviseesPageComponent
+    AdviseesPageComponent,
+    CourseSearchFormComponent
   ],
   imports: [
     AppRoutingModule,
