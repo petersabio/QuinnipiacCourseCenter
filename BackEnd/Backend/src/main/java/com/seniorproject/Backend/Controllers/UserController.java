@@ -37,6 +37,13 @@ public class UserController {
     @GetMapping("Users")
     public List<User> getUsers() {return this.userRepository.findAll();}
 
+    //get info for specific user based on username
+    @GetMapping("getUser")
+    public User getUserInfo(@RequestBody User userData){
+        return this.userRepository.findByusername(userData.getUsername());
+        
+    }
+
 
 
 }
