@@ -1,17 +1,17 @@
 package com.seniorproject.Backend.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 import jakarta.persistence.*;
+import static jakarta.persistence.GenerationType.SEQUENCE;
 
 @Entity
 @Table(name = "PlannedCoursesTable")
 public class PlannedCourses {
     @Id
-    @Column(name = "userID")
-    private int userID;
-    //@Id
+    @Column(name = "ID")
+    @GeneratedValue(strategy =SEQUENCE, generator ="ID_SEQ")
+    private int ID;
+    @Column(name = "userName")
+    private String userName;
     @Column(name = "coursecode")
     private String coursecode;
     @Column(name = "semester")
@@ -21,12 +21,20 @@ public class PlannedCourses {
 
     //Getters and Setters
 
-    //User ID
-    public int getUserID() {
-        return userID;
+    public int getID(){
+        return ID;
     }
-    public void setUserID(int userID) {
-        this.userID = userID;
+
+    public void setID(int ID){
+        this.ID = ID;
+    }
+
+    //User ID
+    public String getUserName() {
+        return userName;
+    }
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     //Course Code

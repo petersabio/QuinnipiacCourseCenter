@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Course } from '../../model/course';
 import { courseService } from '../../service/course-service.service';
 import { CommonModule } from "@angular/common";
+import { PlannedCourse } from 'src/app/model/planned-course';
+import { PlannedCourseService } from 'src/app/service/planned-course.service';
 
 @Component({
   selector: 'app-course-catalog-page',
@@ -16,8 +18,9 @@ export class CourseCatalogPageComponent {
 
   courses!: Course[];
   popupCourse!: Course;
+  plannedCourse:PlannedCourse = new PlannedCourse;
 
-  constructor(private courseService: courseService) {}
+  constructor(private courseService: courseService, private plannedcourseservice: PlannedCourseService) {}
 
   ngOnInit() {
       this.courseService.getCourses().subscribe((data: Course[]) => {
@@ -55,7 +58,14 @@ export class CourseCatalogPageComponent {
   }
 
   addCourseToCourseList() {
+    this.plannedCourse.coursecode=this.popupCourse.coursecode
+    this.plannedCourse.userName=localStorage.getItem("activeUser")!
+    this.plannedCourse.semester = this.popupCourse.offsemester
+    console.log(this.plannedCourse);
 
+    this.plannedcourseservice.planCourse(this.plannedCourse).subscribe(data=>{
+      alert("course succefully added");
+    },error=> alert("failed to add Course"));
   }
 
   addCourseToSchedule() {

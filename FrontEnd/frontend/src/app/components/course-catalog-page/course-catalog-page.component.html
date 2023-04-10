@@ -75,12 +75,14 @@
             <p *ngIf="popupCourse.days===6">T/Th {{popupCourse.time}}</p>
             <p *ngIf="popupCourse.days===7">M/W {{popupCourse.time}}</p>
             <p *ngIf="popupCourse.days===8">M/W/F {{popupCourse.time}}</p>
-            <p>Professor</p>
+            <p>{{popupCourse.professor}}</p>
             <i class="fa-solid fa-plus" (click)="toggleAddDropdown()">
               <div class="add-dropdown-content" >
                 <div class="add-options-container">
-                  <button class="add-options">Add to Course List</button>
-                  <button class="add-options">Add to Schedule</button>
+                  <form>
+                    <button type ="submit" (click)="addCourseToCourseList()" class="add-options">Add to Course List</button>
+                    <button class="add-options">Add to Schedule</button>
+                  </form>
                 </div>
               </div>
             </i>

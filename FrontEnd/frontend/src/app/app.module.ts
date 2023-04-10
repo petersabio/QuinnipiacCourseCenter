@@ -21,6 +21,7 @@ import { courseService } from './service/course-service.service';
 import { CourseListComponent } from './components/course-list/course-list.component';
 import { FormsModule } from '@angular/forms';
 import { CourseSearchFormComponent } from './components/course-catalog-page/course-search-form/course-search-form.component';
+//import { PlanedCourseComponent } from './planed-course/planed-course.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CourseSearchFormComponent } from './components/course-catalog-page/cour
     CourseCatalogPageComponent,
     MessagingCenterPageComponent,
     AdviseesPageComponent,
-    CourseSearchFormComponent
+    CourseSearchFormComponent,
+    //PlanedCourseComponent
   ],
   imports: [
     AppRoutingModule,

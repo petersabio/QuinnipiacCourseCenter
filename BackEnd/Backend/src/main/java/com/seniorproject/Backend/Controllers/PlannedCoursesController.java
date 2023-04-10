@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("api/")
 public class PlannedCoursesController {
-    @Autowired
-    private PlannedCoursesRepository plannedCoursesRepository;
 
-    @PostMapping("addCourse")
-    public ResponseEntity<PlannedCourses> planCourse(@RequestBody PlannedCourses course){
-        return ResponseEntity.ok(plannedCoursesRepository.save(course));
+    @Autowired
+    private PlannedCoursesRepository repo;
+    
+    @PostMapping("planCourse")
+    public ResponseEntity<PlannedCourses> planCourse(@RequestBody PlannedCourses plannedcourse){
+        System.out.println("test");
+        return ResponseEntity.ok(repo.save(plannedcourse));
     }
 
 }
