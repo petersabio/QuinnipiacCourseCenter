@@ -20,6 +20,7 @@ import { CourseSearchFormComponent } from './components/course-catalog-page/cour
 import { HttpClientModule } from '@angular/common/http';
 import { courseService } from './service/course-service.service';
 import { FormsModule } from '@angular/forms';
+import { CourseSearchFormComponent } from './components/course-catalog-page/course-search-form/course-search-form.component';
 
 
 @NgModule({
