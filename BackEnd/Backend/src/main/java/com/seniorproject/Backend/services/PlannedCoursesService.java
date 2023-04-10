@@ -20,10 +20,10 @@ public class PlannedCoursesService implements PlannedCoursesServiceInterface{
 
     @Override
     public PlannedCourses updatePlannedCourse(PlannedCourses plannedCourses) {
-        Optional<PlannedCourses> plannedcoursesDb = this.plannedCoursesRepository.findById(plannedCourses.getUserID());
+        Optional<PlannedCourses> plannedcoursesDb = this.plannedCoursesRepository.findById(plannedCourses.getID());
         if(plannedcoursesDb.isPresent()){
             PlannedCourses plannedcoursesUpdate = plannedcoursesDb.get();
-            plannedcoursesUpdate.setUserID(plannedCourses.getUserID());
+            plannedcoursesUpdate.setID(plannedCourses.getID());
             plannedcoursesUpdate.setCoursecode(plannedCourses.getCoursecode());
             plannedcoursesUpdate.setSemester(plannedCourses.getSemester());
             plannedcoursesUpdate.setGrade(plannedCourses.getGrade());
@@ -31,7 +31,7 @@ public class PlannedCoursesService implements PlannedCoursesServiceInterface{
             plannedCoursesRepository.save(plannedcoursesUpdate);
             return plannedcoursesUpdate;
         }else{
-            throw new ResourceNotFoundException("Record not Found with code: " + plannedCourses.getUserID());
+            throw new ResourceNotFoundException("Record not Found with code: " + plannedCourses.getID());
         }
     }
 

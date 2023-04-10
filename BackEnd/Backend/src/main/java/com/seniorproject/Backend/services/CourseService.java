@@ -32,7 +32,7 @@ public class CourseService implements  CoursesServiceInterface {
             coursesUpdate.setSection(course.getSection());
             coursesUpdate.setOffsemester(course.getOffsemester());
             coursesUpdate.setCoursename(course.getCoursename());
-            coursesUpdate.setPorfessor(course.getPorfessor());
+            coursesUpdate.setPorfessor(course.getProfessor());
             coursesUpdate.setDescription(course.getDescription());
             coursesUpdate.setPrereq(course.getPrereq());
             coursesUpdate.setDays(course.getDays());

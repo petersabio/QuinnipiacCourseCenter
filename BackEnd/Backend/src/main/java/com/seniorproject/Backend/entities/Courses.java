@@ -82,7 +82,7 @@ public class Courses {
     }
 
     //Professor
-    public String getPorfessor() {
+    public String getProfessor() {
         return professor;
     }
     public void setPorfessor(String porfessor) {
