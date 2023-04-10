@@ -32,61 +32,64 @@
   </div>
 </div>
 
+<div class="main-form">
+  <app-course-search-form></app-course-search-form>
+</div>
+
 <div class="main">
   <div class="items">
+    <h1>All Courses</h1>
     <div class="items-body">
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
+      <div class="items-body-content" *ngFor = "let course of courses" (click)="openCoursePopup(course.coursecode)">
+        <p><strong>{{ course.coursecode }}</strong><br/>{{ course.coursename }}</p>
+        <i class="fa-solid fa-share-from-square" (click)="toggleShareDropdown()"></i>
       </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
-      <div class="items-body-content">
-        <span><strong>Course Code</strong><br/>Course Name<br/>Brief Description</span>
-        <i class="fa fa-caret-down"></i>
-      </div>
+
     </div>
+  </div>
+</div>
+
+
+<div class="modal" *ngIf="popupStatus==='open'">
+  <div class="modal-content">
+    <div class="close" (click)="closePopup()"><i class="fa-solid fa-xmark fa-xl"></i></div>
+    <p><strong>{{popupCourse.coursecode}}</strong> {{popupCourse.coursename}}
+      <br/>{{popupCourse.description}}
+      <br/><div class="flex-line"><div class="italic">Requisites: </div>{{popupCourse.prereq}}</div>
+      <br/><div class="flex-line"><div class="italic">Offered: </div>{{popupCourse.offsemester}}</div>
+
+    <div class="term-sections">
+      <nav>
+
+        <label for="touch"><span>Sections</span></label>
+        <input type="checkbox" id="touch">
+
+        <ul class="slide">
+          <li>
+            <p>{{popupCourse.coursecode}}-{{popupCourse.section}}</p>
+            <p *ngIf="popupCourse.days===1">M {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===2">T {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===3">W {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===4">Th {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===5">F {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===6">T/Th {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===7">M/W {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===8">M/W/F {{popupCourse.time}}</p>
+            <p>Professor</p>
+            <i class="fa-solid fa-plus" (click)="toggleAddDropdown()">
+              <div class="add-dropdown-content" >
+                <div class="add-options-container">
+                  <button class="add-options">Add to Course List</button>
+                  <button class="add-options">Add to Schedule</button>
+                </div>
+              </div>
+            </i>
+
+          </li>
+        </ul>
+
+      </nav>
+    </div>
+
   </div>
 </div>

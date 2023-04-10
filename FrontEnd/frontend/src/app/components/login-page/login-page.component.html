@@ -1,11 +1,10 @@
 <div class="container" id="container" *ngIf="togglePanel==='left-active'">
   <div class="form-container log-in-container">
-    <form (ngSubmit)="userLogin()" >
+    <form action="#">
       <h1>Log In</h1>
-      <input type="text" placeholder="Email" [(ngModel)]="user.username" class="form-control" id ="username" name="username"/>
-      <input type="password" placeholder="Password" [(ngModel)]="user.password" class="form-control" id ="password" name="password" />
-      <button type="submit" class="btn btn-primary">Log In</button>
-      <!--[routerLink]="['home']" (click)="login()"-->
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button class="btn btn-primary" [routerLink]="['home']" (click)="login()">Log In</button>
     </form>
   </div>
   <div class="overlay-container">
@@ -21,16 +20,12 @@
 
 <div class="container right-panel-active" id="container2" *ngIf="togglePanel==='right-active'">
   <div class="form-container sign-up-container">
-    <form (ngSubmit)="userSignUp()">
+    <form action="#">
       <h1>Sign Up</h1>
-      <input type="text" placeholder="Username" class="form-control" id ="username" name="username" [(ngModel)]="user.username" />
-      <input type="password" placeholder="Password" class="form-control" id ="password" name="password"[(ngModel)]="user.password"/>
-      <input type="password" placeholder="Confirm Password" class="form-control" id ="cpassword" name="cpassword"/>
-      <input type="text" placeholder="Name" class="form-control" id ="name" name="name" [(ngModel)]="user.name" />
-      <input type="text" placeholder="Major" class="form-control" id ="major" name="major"[(ngModel)]="user.major" />
-      <input type="text" placeholder="Minor" class="form-control" id ="minor" name="minor"[(ngModel)]="user.minor" />
-      <!--input type="text" placeholder="Username" /-->
-      <button type = "submit" class="btn btn-primary">Sign Up</button>
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Sign Up</button>
     </form>
   </div>
   <div class="overlay-container">

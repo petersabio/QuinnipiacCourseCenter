@@ -17,4 +17,8 @@ export class courseService {
   public getCourses(): Observable<Course[]> {
     return this.http.get<Course[]>(`${this.baseUrl}`);
   }
+
+//   public getCourse(course): Observable<Course> {
+//     return this.http.get<Course>(`${this.baseUrl}`);
+//   }
 }
