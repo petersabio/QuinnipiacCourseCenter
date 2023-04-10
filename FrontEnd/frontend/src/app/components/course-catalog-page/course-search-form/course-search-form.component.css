@@ -1,0 +1,34 @@
+.inner-form {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+h1 {
+  color: #2A2B33;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #818181;
+}
+
+.input-field {
+  margin: 20px;
+}
+
+label {
+  color: white;
+  margin: 5px;
+}
+
+button {
+  max-width: 100px;
+  padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #0F9FEF;
+}

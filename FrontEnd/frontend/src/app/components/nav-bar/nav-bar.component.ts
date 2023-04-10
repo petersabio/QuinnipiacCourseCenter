@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class NavBarComponent {
 
+  public toggleSettings: String = "inactive";
+
+
+  openSettings() {
+    if (this.toggleSettings == "inactive") {
+      this.toggleSettings = "active";
+    } else if (this.toggleSettings == "active") {
+      this.toggleSettings = "inactive";
+    }
+  }
 }
