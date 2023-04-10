@@ -4,14 +4,17 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.*;
+import static jakarta.persistence.GenerationType.SEQUENCE;
 
 @Entity
 @Table(name = "PlannedCoursesTable")
 public class PlannedCourses {
     @Id
+    @Column(name = "ID")
+    @GeneratedValue(strategy =SEQUENCE, generator ="ID_SEQ")
+    private int ID;
     @Column(name = "userID")
     private int userID;
-    //@Id
     @Column(name = "coursecode")
     private String coursecode;
     @Column(name = "semester")
@@ -20,7 +23,7 @@ public class PlannedCourses {
     private int grade;
 
     //Getters and Setters
-
+    
     //User ID
     public int getUserID() {
         return userID;
