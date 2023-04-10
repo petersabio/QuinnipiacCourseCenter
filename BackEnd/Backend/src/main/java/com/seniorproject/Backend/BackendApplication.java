@@ -29,15 +29,7 @@ public class BackendApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		//System.out.println("test");
-		//User testuser = new User(1,"dave","test","1234",0,40,"lunch","math",3,4);
-		//createAccount(testuser);
-		//java.sql.Time time = new java.sql.Time(1234567899);
-		//Courses testcourse = new Courses("test", "test", "test", "test", "test", "test", "test", 2,time);
-		//this.coursesRepository.save(testcourse);
-		//courseService.getAllCourses().forEach(System.out::println);
-
-
+		
 	}
 
 	private void createAccount(User user){

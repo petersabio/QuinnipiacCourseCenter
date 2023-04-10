@@ -17,6 +17,7 @@ export class CourseCatalogPageComponent {
   public addOptions: String = "close";
 
   courses!: Course[];
+  plannedCourses!: PlannedCourse[];
   popupCourse!: Course;
   plannedCourse:PlannedCourse = new PlannedCourse;
 
@@ -69,7 +70,7 @@ export class CourseCatalogPageComponent {
   }
 
   addCourseToSchedule() {
-
+    
   }
 
 

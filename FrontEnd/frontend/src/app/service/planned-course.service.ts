@@ -11,9 +11,8 @@ export class PlannedCourseService {
 
   constructor(private httpclient: HttpClient) { }
 
-  planCourse(course:PlannedCourse): Observable<object>{
+  public planCourse(course:PlannedCourse): Observable<object>{
     console.log(course);
-    console.log("test");
     return this.httpclient.post(`${this.baseUrl}`,course);
   }
 
