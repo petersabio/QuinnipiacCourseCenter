@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'planned-courses', component: PlannedCoursesPageComponent },
   { path: 'progress', component: ProgressPageComponent },
-  { path: 'course-catalog', component: CourseListComponent },
+  { path: 'course-catalog', component: CourseCatalogPageComponent },
   { path: 'messaging-center', component: MessagingCenterPageComponent },
   { path: 'advisees', component: AdviseesPageComponent }
 ];
