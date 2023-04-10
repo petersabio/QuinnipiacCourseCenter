@@ -11,15 +11,14 @@ import { ProgressPageComponent } from './components/progress-page/progress-page.
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { TermCalendarComponent } from './components/planned-courses-page/term-calendar/term-calendar.component';
-//import { CourseListComponent } from './components/planned-courses-page/course-list/course-list.component';
+import { CourseListComponent } from './components/planned-courses-page/course-list/course-list.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { CourseCatalogPageComponent } from './components/course-catalog-page/course-catalog-page.component';
 import { MessagingCenterPageComponent } from './components/messaging-center-page/messaging-center-page.component';
 import { AdviseesPageComponent } from './components/advisees-page/advisees-page.component';
+import { CourseSearchFormComponent } from './components/course-catalog-page/course-search-form/course-search-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { courseService } from './service/course-service.service';
-import { CourseListComponent } from './components/course-list/course-list.component';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,17 +32,17 @@ import { FormsModule } from '@angular/forms';
     LoginPageComponent,
     CourseCatalogPageComponent,
     MessagingCenterPageComponent,
-    AdviseesPageComponent
+    AdviseesPageComponent,
+    CourseSearchFormComponent
   ],
   imports: [
     AppRoutingModule,
     HttpClientModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     BrowserModule,
-    CommonModule,
-    FormsModule
+    CommonModule
   ],
   providers: [courseService],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

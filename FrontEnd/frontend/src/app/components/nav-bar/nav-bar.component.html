@@ -25,7 +25,12 @@
             <a class="nav-link" href="#" routerLink="/messaging-center" routerLinkActive="active">Messaging Center</a>
           </nav>
         </li>
-        <li style="float: right;"><a href="#">Settings</a></li>
+        <li style="float: right;"><a (click)="openSettings()">Settings</a></li>
       </ul>
-
 </nav>
+<div class="panel" *ngIf="toggleSettings==='active'">
+  <div class="settings-side-panel">
+    <label></label>
+  </div>
+</div>
+

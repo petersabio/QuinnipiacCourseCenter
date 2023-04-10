@@ -36,3 +36,16 @@ li a:hover {
   background-color: #2A2B33;
 }
 
+.panel .settings-side-panel {
+  height: 100%;
+  width: 250px;
+  background-color: #2A2B33;
+  position: absolute;
+  right: 0;
+}
+
+label {
+  color: white;
+  margin: 10px;
+}
+
