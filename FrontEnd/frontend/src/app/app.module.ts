@@ -18,6 +18,8 @@ import { MessagingCenterPageComponent } from './components/messaging-center-page
 import { AdviseesPageComponent } from './components/advisees-page/advisees-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { courseService } from './service/course-service.service';
+import { PlannedCourseService } from './service/planned-course.service';
+import { UserService } from './service/user.service';
 import { FormsModule } from '@angular/forms';
 import { CourseSearchFormComponent } from './components/course-catalog-page/course-search-form/course-search-form.component';
 
@@ -44,7 +46,7 @@ import { CourseSearchFormComponent } from './components/course-catalog-page/cour
     CommonModule,
     FormsModule
   ],
-  providers: [courseService],
+  providers: [courseService, PlannedCourseService, UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

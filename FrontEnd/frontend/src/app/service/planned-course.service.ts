@@ -8,13 +8,18 @@ import { Observable } from 'rxjs';
 })
 export class PlannedCourseService {
   private baseUrl="http://localhost:8080/api/planCourse"
+  private plannedCoursesListUrl="http://localhost:8080/api/plannedCourses"
 
-  constructor(private httpclient: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   planCourse(course:PlannedCourse): Observable<object>{
     console.log(course);
     console.log("test");
-    return this.httpclient.post(`${this.baseUrl}`,course);
+    return this.httpClient.post(`${this.baseUrl}`,course);
+  }
+
+  public getPlannedCourses(): Observable<PlannedCourse[]> {
+    return this.httpClient.get<PlannedCourse[]>(`${this.plannedCoursesListUrl}`);
   }
 
 }

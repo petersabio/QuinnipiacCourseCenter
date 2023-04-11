@@ -23,11 +23,11 @@ export class CourseCatalogPageComponent {
   constructor(private courseService: courseService, private plannedcourseservice: PlannedCourseService) {}
 
   ngOnInit() {
-      this.courseService.getCourses().subscribe((data: Course[]) => {
-        console.log(data);
-        this.courses = data;
-      });
-    }
+    this.courseService.getCourses().subscribe((data: Course[]) => {
+      console.log(data);
+      this.courses = data;
+    });
+  }
 
   toggleSubject() {
     if (this.toggleDropdown == "subject-active") {
