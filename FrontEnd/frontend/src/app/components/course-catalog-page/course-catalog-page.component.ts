@@ -75,7 +75,6 @@ export class CourseCatalogPageComponent {
 
 
   openCoursePopup(courseCode: String) {
-  //<span><strong>{{ popupCourse.coursecode }}</strong><br/>{{ popupCourse.coursename }}<br/>{{ popupCourse.description }}</span>
 
     this.popupStatus = "open";
 
