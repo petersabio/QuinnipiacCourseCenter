@@ -46,7 +46,7 @@ import { CourseSearchFormComponent } from './components/course-catalog-page/cour
     CommonModule,
     FormsModule
   ],
-  providers: [courseService, PlannedCourseService, UserService],
+  providers: [courseService, PlannedCourseService, UserService, ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="items">
     <div class="items-body">
-      <div class="items-body-content" *ngFor="let plannedCourse of plannedCourses" (click)="openCoursePopup(plannedCourse.coursecode)">
+      <div class="items-body-content" *ngFor="let plannedCourse of activeUserPlannedCourses" (click)="openCoursePopup(plannedCourse.coursecode)">
           <div><strong>{{ plannedCourse.coursecode }}</strong><br/>{{getCourseName(plannedCourse.coursecode)}}</div>
           <i class="fa-solid fa-share-from-square"></i>
 

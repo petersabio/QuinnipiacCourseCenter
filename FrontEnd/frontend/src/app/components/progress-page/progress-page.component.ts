@@ -1,10 +1,52 @@
 import { Component } from '@angular/core';
 
+import { User } from 'src/app/model/user';
+import { UserService } from 'src/app/service/user.service';
+import { LoginserviceService } from 'src/app/service/loginservice.service';
+
 @Component({
   selector: 'app-progress-page',
   templateUrl: './progress-page.component.html',
   styleUrls: ['./progress-page.component.css']
 })
 export class ProgressPageComponent {
+
+   constructor(private userService: UserService, private loginservice: LoginserviceService) { }
+
+   users!: Array<User>;
+   currentUser!: object;
+   username!: String;
+   name!: String;
+   major!: String;
+   minor!: String;
+   gpa!: number;
+   credits!: number;
+
+   ngOnInit() {
+     this.userService.getUsers().subscribe((data: Array<User>) => {
+      console.log(data);
+      this.users = data;
+      this.username = localStorage.getItem("activeUser")!;
+      this.getCurrentUserInfo(this.username);
+     });
+
+   }
+
+   getCurrentUserInfo(username: String) {
+      for (var User of this.users) {
+        if (User.username == username) {
+          this.loginservice.loginUser(User).subscribe(data => {
+            this.currentUser = data;
+            this.name = User.name;
+            this.major = User.major;
+            this.minor = User.minor;
+            this.gpa = User.gpa;
+            this.credits = User.credits;
+          });
+          break;
+        }
+      }
+   }
+
 
 }

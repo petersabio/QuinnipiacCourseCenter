@@ -15,7 +15,7 @@ h1 {
 }
 
 .container1 {
-  height: 275px;
+  height: 150px;
   background: #050735;
 }
 
@@ -33,6 +33,7 @@ body {
 .container {
   margin: auto;
   width: 95%;
+  height: 0px;
   text-align: center;
 }
 

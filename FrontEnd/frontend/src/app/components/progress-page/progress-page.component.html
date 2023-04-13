@@ -6,26 +6,16 @@
     </head>
     <body>
       <div class="container">
-        <h1 id='userDisplay'>Name</h1>
+        <h1 id='userDisplay'>{{name}}</h1>
         <div class="container1">
           <div class="grid-container">
             <div class="float-child">
-              <p class="student-info"><strong>Cumulative GPA:   </strong>4.00</p>
-              <p class="student-info"><strong>Institution GPA:  </strong>4.00</p>
-              <p class="student-info"><strong>Degree:   </strong>Bachelor of Science</p>
-              <p class="student-info"><strong>Major:  </strong>Computer Science</p>
-              <p class="student-info"><strong>Minors:   </strong>None</p>
-              <p class="student-info"><strong>Graduating Class:   </strong>2023</p>
+              <p class="student-info"><strong>Cumulative GPA:   </strong>{{gpa}}</p>
+              <p class="student-info"><strong>Major:  </strong>{{major}}</p>
+              <p class="student-info"><strong>Minor(s):   </strong>{{minor}}</p>
             </div>
             <div class="float-child">
-              <p><strong>Total Credits</strong>  96 of 121</p>
-              <div class="progress">
-                <div class="progress-bar"></div>
-              </div>
-              <p><strong>Total Credits From This School</strong>  96 of 121</p>
-              <div class="progress">
-                <div class="progress-bar"></div>
-              </div>
+              <p><strong>Total Credits</strong> {{credits}}</p>
             </div>
           </div>
         </div>

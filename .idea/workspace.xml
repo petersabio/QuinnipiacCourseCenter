@@ -5,23 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58fbafdd-1398-4469-970d-ade14810141e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/user.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/Backend/src/main/java/com/seniorproject/Backend/Controllers/PlannedCoursesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/Backend/src/main/java/com/seniorproject/Backend/Controllers/PlannedCoursesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/course-list/course-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/course-list/course-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/login-page/login-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/login-page/login-page.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/course-list/course-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/course-list/course-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/course-list/course-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/course-list/course-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/term-calendar/term-calendar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/term-calendar/term-calendar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/term-calendar/term-calendar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/term-calendar/term-calendar.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/planned-course.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/planned-course.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/services/data/data.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/user.service.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/services/data/data.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/loginservice.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/loginservice.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/user.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
