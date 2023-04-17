@@ -1,0 +1,175 @@
+$pri: #128CFC;
+$sec: #fffffe;
+$dark-pri: #0B5AA2;
+* {
+  box-sizing: border-radius;
+  font-family: 'Rubik', sans-serif;
+}
+.container {
+  border: 1px solid black;
+  border-radius: 8px;
+  height: 710px;
+
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: 2%;
+
+  display: grid;
+
+  background-color: #fff;
+}
+
+.items {
+  width: 100%;
+  background: $sec;
+  box-shadow: 0 3px 6px rgba(black,0.16), 0 3px 6px rgba(black,0.23);
+  border-top: 10px solid $dark-pri;
+}
+
+.items-body {
+  padding: 10px;
+  margin: 10px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 50% 50%;
+}
+
+.items-body-content {
+  padding: 10px;
+  padding-right: 0px;
+  display: grid;
+  grid-template-columns: 12fr 2fr;
+  background-color: #0F9FEF;
+  font-size: 13px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.items-body-content:hover {
+  border-radius: 8px;
+  border: 1px solid $dark-pri;
+}
+
+.items-body-content i {
+  height: 25px;
+  align-self: center;
+  font-size: 15px;
+  color: $dark-pri;
+  font-weight: bold;
+}
+
+.items-body-content span {
+  color: #fff;
+  font-size: 16px;
+}
+
+.items-body-content i:hover {
+  color: #EEDA15;
+}
+
+
+.modal {
+  display: block;
+  width: 80%;
+  margin-left: 250px;
+  margin-top: 200px;
+  border-radius: 8px;
+  height: auto;
+}
+
+
+.modal-content {
+  background-color: #D4D4DA;
+  padding: 20px;
+}
+
+.modal .close {
+  cursor: pointer;
+}
+
+.close i:hover {
+  color: #E40000;
+}
+
+
+nav {
+  width : 100%;
+  background: #d9d9d9;
+  margin : 40px auto;
+}
+
+label {
+  width: 100%;
+  text-align: center;
+}
+
+span {
+  padding : 30px;
+  background : #2d2f31;
+  color : white;
+  font-size : 1.2em;
+  font-variant : small-caps;
+  cursor : pointer;
+  display: block;
+}
+
+span::after {
+  float: right;
+  right: 10%;
+  content: "+";
+}
+
+
+.slide {
+  clear:both;
+  width:100%;
+  height:0px;
+  overflow: hidden;
+  transition: height .4s ease;
+}
+
+.slide li {
+  display: grid;
+  grid-template-columns: 30% 30% 30% 15%;
+  padding : 30px;
+}
+
+.slide li i:hover {
+  color: #E40000;
+}
+
+.slide li i:hover .add-options-container {
+  display: block;
+}
+
+.slide li i:hover .slide {
+  height: 200px;
+}
+
+#touch {position: absolute; opacity: 0; height: 0px;}
+
+#touch:checked + .slide {height: 120px;}
+
+ul li::marker {
+  content: "";
+}
+
+ul {
+  background-color: #0F9FEF;
+}
+
+.italic {
+  font-style: italic;
+  margin-right: 5px;
+}
+
+.flex-line {
+  display: flex;
+}
+
+h1 {
+  color: #2A2B33;
+  margin: 20px;
+}
+
+
+

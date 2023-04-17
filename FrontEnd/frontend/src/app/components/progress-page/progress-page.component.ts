@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { User } from 'src/app/model/user';
 import { UserService } from 'src/app/service/user.service';
 import { LoginserviceService } from 'src/app/service/loginservice.service';
+import { PlannedCourseService } from 'src/app/service/planned-course.service';
+import { PlannedCourse } from 'src/app/model/planned-course';
 
 @Component({
   selector: 'app-progress-page',
@@ -11,7 +13,9 @@ import { LoginserviceService } from 'src/app/service/loginservice.service';
 })
 export class ProgressPageComponent {
 
-   constructor(private userService: UserService, private loginservice: LoginserviceService) { }
+  plannedCourses!: PlannedCourse[];
+
+   constructor(private userService: UserService, private loginservice: LoginserviceService, private plannedCourseService: PlannedCourseService) { }
 
    users!: Array<User>;
    currentUser!: object;
@@ -22,6 +26,7 @@ export class ProgressPageComponent {
    gpa!: number;
    credits!: number;
 
+
    ngOnInit() {
      this.userService.getUsers().subscribe((data: Array<User>) => {
       console.log(data);
@@ -29,6 +34,11 @@ export class ProgressPageComponent {
       this.username = localStorage.getItem("activeUser")!;
       this.getCurrentUserInfo(this.username);
      });
+
+     this.plannedCourseService.getPlannedCourses().subscribe((data: PlannedCourse[]) => {
+      console.log(data);
+      this.plannedCourses = data;
+    });
 
    }
 
@@ -47,6 +57,7 @@ export class ProgressPageComponent {
         }
       }
    }
+
 
 
 }
