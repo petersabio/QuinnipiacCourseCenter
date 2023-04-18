@@ -263,7 +263,7 @@ h3 {
 .grid-container {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-row-gap: auto;
+  grid-row-gap: 50px;
   
   
 }
