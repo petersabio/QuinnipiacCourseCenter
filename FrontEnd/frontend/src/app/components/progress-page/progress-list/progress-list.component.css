@@ -8,10 +8,12 @@ $dark-pri: #0B5AA2;
 .container {
   border: 1px solid black;
   border-radius: 8px;
-  height: 710px;
+  height: auto;
+  
 
   top: 0; right: 0; bottom: 0; left: 0;
   margin: 2%;
+  
 
   display: grid;
 

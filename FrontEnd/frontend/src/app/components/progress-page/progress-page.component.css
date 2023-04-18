@@ -253,6 +253,22 @@ span::after {
   text-align: center;
 }
 
+
+h3 {
+  font-weight: bold;
+  color: #0F9FEF;
+  font-size: 24px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: auto;
+  
+  
+}
+
+
 .slide li {padding : 30px;}
 
 #touch1, #touch2 {position: absolute; opacity: 0; height: 0px;}

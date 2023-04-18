@@ -22,6 +22,8 @@ import { PlannedCourseService } from './service/planned-course.service';
 import { UserService } from './service/user.service';
 import { FormsModule } from '@angular/forms';
 import { CourseSearchFormComponent } from './components/course-catalog-page/course-search-form/course-search-form.component';
+import { ProgressListComponent } from './components/progress-page/progress-list/progress-list.component';
+
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { CourseSearchFormComponent } from './components/course-catalog-page/cour
     CourseCatalogPageComponent,
     MessagingCenterPageComponent,
     AdviseesPageComponent,
-    CourseSearchFormComponent
+    CourseSearchFormComponent,
+    ProgressListComponent
   ],
   imports: [
     AppRoutingModule,

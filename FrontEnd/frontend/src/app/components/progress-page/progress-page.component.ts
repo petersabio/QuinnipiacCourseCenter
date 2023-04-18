@@ -29,14 +29,14 @@ export class ProgressPageComponent {
 
    ngOnInit() {
      this.userService.getUsers().subscribe((data: Array<User>) => {
-      console.log(data);
+      //console.log(data);
       this.users = data;
       this.username = localStorage.getItem("activeUser")!;
       this.getCurrentUserInfo(this.username);
      });
 
      this.plannedCourseService.getPlannedCourses().subscribe((data: PlannedCourse[]) => {
-      console.log(data);
+      //console.log(data);
       this.plannedCourses = data;
     });
 
