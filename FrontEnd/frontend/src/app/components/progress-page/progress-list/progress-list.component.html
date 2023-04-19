@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="items">
+    <div class="items-body">
+      <div class="items-body-content" *ngFor="let plannedCourse of activeUserPlannedCourses" (click)="openCoursePopup(plannedCourse.coursecode)">
+          <div><strong>{{ plannedCourse.coursecode }}</strong><br/>{{getCourseName(plannedCourse.coursecode)}}</div>
+          <i class="fa-solid fa-share-from-square"></i>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" *ngIf="popupStatus==='open'">
+  <div class="modal-content">
+    <div class="close" (click)="closePopup()"><i class="fa-solid fa-xmark fa-xl"></i></div>
+    <p><strong>{{popupCourse.coursecode}}</strong> {{popupCourse.coursename}}
+      <br/>{{popupCourse.description}}
+      <br/><div class="flex-line"><div class="italic">Requisites: </div>{{popupCourse.prereq}}</div>
+    <br/><div class="flex-line"><div class="italic">Offered: </div>{{popupCourse.offsemester}}</div>
+
+    <div class="term-sections">
+      <nav>
+
+        <label for="touch"><span>Sections</span></label>
+        <input type="checkbox" id="touch">
+
+        <ul class="slide">
+          <li>
+            <p>{{popupCourse.coursecode}}-{{popupCourse.section}}</p>
+            <p *ngIf="popupCourse.days===1">M {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===2">T {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===3">W {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===4">Th {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===5">F {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===6">T/Th {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===7">M/W {{popupCourse.time}}</p>
+            <p *ngIf="popupCourse.days===8">M/W/F {{popupCourse.time}}</p>
+            <p>{{popupCourse.professor}}</p>
+            <i class="fa-solid fa-xmark" (click)="removeFromCourseList()"></i>
+
+          </li>
+        </ul>
+
+      </nav>
+    </div>
+
+  </div>
+</div>

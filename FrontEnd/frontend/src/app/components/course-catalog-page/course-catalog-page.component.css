@@ -214,7 +214,7 @@ span::after {
 
 #touch {position: absolute; opacity: 0; height: 0px;}
 
-#touch:checked + .slide {height: 120px;}
+#touch:checked + .slide {height: 145px;}
 
 ul li::marker {
   content: "";
@@ -222,7 +222,10 @@ ul li::marker {
 
 ul {
   background-color: #0F9FEF;
+  margin-right: 10px;
+  
 }
+
 
 .add-options-container {
   float: right;
