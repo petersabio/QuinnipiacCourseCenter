@@ -28,7 +28,7 @@ export class ProgressListComponent {
   activeUserPlannedCourses!: Array<PlannedCourse>;
   users!: Array<User>;
   currentUser!: object;
-  username!: String;
+  username!: string;
 
   ngOnInit() {
     this.courseService.getCourses().subscribe((data: Course[]) => {
@@ -36,32 +36,34 @@ export class ProgressListComponent {
       this.courses = data;
     });
 
+    this.username = localStorage.getItem("activeUser")!
+
+    // this.userService.getUsers().subscribe((data: Array<User>) => {
+    //   //console.log(data);
+    //   this.users = data;
+    //   this.username = localStorage.getItem("activeUser")!;
+    //   this.getCurrentUserInfo(this.username);
+    // });
+
     this.plannedCourseService.getPlannedCourses().subscribe((data: Array<PlannedCourse>) => {
-      //console.log(data);
       this.plannedCourses = data;
       this.activeUserPlannedCourses = new Array<PlannedCourse>();
       this.filterPlannedCourses();
     });
 
-    this.userService.getUsers().subscribe((data: Array<User>) => {
-      //console.log(data);
-      this.users = data;
-      this.username = localStorage.getItem("activeUser")!;
-      this.getCurrentUserInfo(this.username);
-    });
 
   }
 
-  getCurrentUserInfo(username: String) {
-    for (var User of this.users) {
-      if (User.username == username) {
-        this.loginservice.loginUser(User).subscribe(data => {
-        this.currentUser = data;
-        });
-        break;
-      }
-    }
-  }
+  // getCurrentUserInfo(username: String) {
+  //   for (var User of this.users) {
+  //     if (User.username == username) {
+  //       this.loginservice.loginUser(User).subscribe(data => {
+  //       this.currentUser = data;
+  //       });
+  //       break;
+  //     }
+  //   }
+  // }
 
   getCourseName(courseCode: String): String {
     var courseName = "";
@@ -76,36 +78,38 @@ export class ProgressListComponent {
   //filters planned courses data by active user and by selected year
   //will filter out all class that do not have freshman, sophmore, junior, or senior set as semester
   filterPlannedCourses() {
-    if(this.sortBy == "Freshman")//freshman table filter
-    {
+    switch(this.sortBy){
+      case "Freshman":  //Freshman Filter
         for (var PlannedCourse of this.plannedCourses) {
-            if (PlannedCourse.userName == this.username && PlannedCourse.semester == "Freshman") {
-              this.activeUserPlannedCourses.push(PlannedCourse);
-            }
-          }
-    }else if(this.sortBy == "Sophmore")//sophmore table filter
-    {
+                    if (PlannedCourse.userName == this.username && PlannedCourse.semester == "Freshman") {
+                      this.activeUserPlannedCourses.push(PlannedCourse);
+                    }
+                  }
+                  break;
+      case "Sophmore":  //Sophmore Filter
         for (var PlannedCourse of this.plannedCourses) {
-            if (PlannedCourse.userName == this.username && PlannedCourse.semester == "Sophmore") {
-              this.activeUserPlannedCourses.push(PlannedCourse);
-            }
-          }
-    }else if(this.sortBy == "Junior")//junior table filter
-    {
+                    if (PlannedCourse.userName == this.username && PlannedCourse.semester == "Sophmore") {
+                      this.activeUserPlannedCourses.push(PlannedCourse);
+                    }
+                  }
+                  break;
+      case "Junior":  //Junior Filter
         for (var PlannedCourse of this.plannedCourses) {
-            if (PlannedCourse.userName == this.username && PlannedCourse.semester == "Junior") {
-              this.activeUserPlannedCourses.push(PlannedCourse);
-            }
-          }
-    }else if(this.sortBy == "Senior")//senior table filter
-    {
+                    if (PlannedCourse.userName == this.username && PlannedCourse.semester == "Junior") {
+                      this.activeUserPlannedCourses.push(PlannedCourse);
+                    }
+                  }
+                  break;
+      case "Senior":  //Senior Filter
         for (var PlannedCourse of this.plannedCourses) {
-            if (PlannedCourse.userName == this.username && PlannedCourse.semester == "Senior") {
-              this.activeUserPlannedCourses.push(PlannedCourse);
-            }
-          }
+                    if (PlannedCourse.userName == this.username && PlannedCourse.semester == "Senior") {
+                      this.activeUserPlannedCourses.push(PlannedCourse);
+                    }
+                  }
+                  break;
+      default: 
+        console.log("Something Went wrong when sorting classes by year. SortBy variable may have been changed")
     }
-    
   }
 
   openCoursePopup(courseCode: String) {
