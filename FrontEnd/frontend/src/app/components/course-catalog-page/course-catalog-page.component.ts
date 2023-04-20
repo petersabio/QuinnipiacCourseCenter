@@ -11,7 +11,8 @@ import { PlannedCourseService } from 'src/app/service/planned-course.service';
   styleUrls: ['./course-catalog-page.component.css']
 })
 export class CourseCatalogPageComponent {
-
+  
+  public selectedYear: string = '';
   public toggleDropdown: String = "non-active";
   public popupStatus: String = "close";
   public addOptions: String = "close";
@@ -60,7 +61,13 @@ export class CourseCatalogPageComponent {
   addCourseToCourseList() {
     this.plannedCourse.coursecode=this.popupCourse.coursecode
     this.plannedCourse.userName=localStorage.getItem("activeUser")!
-    this.plannedCourse.semester = this.popupCourse.offsemester
+
+    if(this.selectedYear == "Now" || this.selectedYear == null || this.selectedYear == ""){
+      this.plannedCourse.semester = this.popupCourse.offsemester
+    }else{
+      this.plannedCourse.semester = this.selectedYear;
+    }
+    
     console.log(this.plannedCourse);
 
     this.plannedcourseservice.planCourse(this.plannedCourse).subscribe(data=>{
@@ -68,8 +75,9 @@ export class CourseCatalogPageComponent {
     },error=> alert("failed to add Course"));
   }
 
-  addCourseToSchedule() {
-
+  //reads selected year input from radio buttons 
+  radioChangeHandler(event: any){
+    this.selectedYear = event.target.value;
   }
 
 

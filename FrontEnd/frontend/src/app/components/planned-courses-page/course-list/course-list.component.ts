@@ -73,7 +73,7 @@ export class CourseListComponent {
 
   filterPlannedCoursesByUser() {
     for (var PlannedCourse of this.plannedCourses) {
-      if (PlannedCourse.userName == this.username) {
+      if (PlannedCourse.userName == this.username && PlannedCourse.semester != "Freshman" && PlannedCourse.semester != "Sophmore" && PlannedCourse.semester != "Junior" && PlannedCourse.semester != "Senior") {
         this.activeUserPlannedCourses.push(PlannedCourse);
       }
     }
