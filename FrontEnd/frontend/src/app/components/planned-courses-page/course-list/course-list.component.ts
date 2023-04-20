@@ -37,11 +37,6 @@ export class CourseListComponent {
     this.plannedCourseService.getPlannedCourses().subscribe((data: Array<PlannedCourse>) => {
       console.log(data);
       this.plannedCourses = data;
-//       for (var PlannedCourse of this.plannedCourses) {
-//         if (PlannedCourse.userName == this.username) {
-// //           this.activeUserPlannedCourses.push(PlannedCourse);
-//         }
-//       }
       this.activeUserPlannedCourses = new Array<PlannedCourse>();
       this.filterPlannedCoursesByUser();
     });
@@ -59,8 +54,7 @@ export class CourseListComponent {
     for (var User of this.users) {
       if (User.username == username) {
         this.loginservice.loginUser(User).subscribe(data => {
-        this.currentUser = data;
-//           this.name = User.name;
+          this.currentUser = data;
         });
         break;
       }

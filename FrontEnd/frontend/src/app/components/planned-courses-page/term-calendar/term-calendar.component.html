@@ -27,264 +27,442 @@
     <table>
       <tbody>
       <tr>
-        <td class="headcol">6:00am</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="headcol">7:00am</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
         <td class="headcol">8:00am</td>
         <td>
-          <div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label>8:00–9:15 CSC*110L</div>
+          <div class="event double" *ngIf="isAtTimeAndDay(0, 'Monday')">{{currentSemesterPlannedCourses.get(0)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(0, 'Tuesday')">{{currentSemesterPlannedCourses.get(0)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(0, 'Wednesday')">{{currentSemesterPlannedCourses.get(0)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(0, 'Thursday')">{{currentSemesterPlannedCourses.get(0)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(0, 'Friday')">{{currentSemesterPlannedCourses.get(0)}}</div>
         </td>
         <td></td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
       </tr>
       <tr>
         <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(1, 'Monday')">{{currentSemesterPlannedCourses.get(1)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(1, 'Tuesday')">{{currentSemesterPlannedCourses.get(1)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(1, 'Wednesday')">{{currentSemesterPlannedCourses.get(1)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(1, 'Thursday')">{{currentSemesterPlannedCourses.get(1)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(1, 'Friday')">{{currentSemesterPlannedCourses.get(1)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol">9:00am</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(2, 'Monday')">{{currentSemesterPlannedCourses.get(2)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(2, 'Tuesday')">{{currentSemesterPlannedCourses.get(2)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(2, 'Wednesday')">{{currentSemesterPlannedCourses.get(2)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(2, 'Thursday')">{{currentSemesterPlannedCourses.get(2)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(2, 'Friday')">{{currentSemesterPlannedCourses.get(2)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label>9:30–10:45 CSC*110</div></td>
-        <td></td>
-        <td><div class="event double"><input id="check" type="checkbox" class="checkbox" /><label for="check"></label>9:30–10:45 CSC*110</div></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(3, 'Monday')">{{currentSemesterPlannedCourses.get(3)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(3, 'Tuesday')">{{currentSemesterPlannedCourses.get(3)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(3, 'Wednesday')">{{currentSemesterPlannedCourses.get(3)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(3, 'Thursday')">{{currentSemesterPlannedCourses.get(3)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(3, 'Friday')">{{currentSemesterPlannedCourses.get(3)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol">10:00am</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(4, 'Monday')">{{currentSemesterPlannedCourses.get(4)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(4, 'Tuesday')">{{currentSemesterPlannedCourses.get(4)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(4, 'Wednesday')">{{currentSemesterPlannedCourses.get(4)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(4, 'Thursday')">{{currentSemesterPlannedCourses.get(4)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(4, 'Friday')">{{currentSemesterPlannedCourses.get(4)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(5, 'Monday')">{{currentSemesterPlannedCourses.get(5)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(5, 'Tuesday')">{{currentSemesterPlannedCourses.get(5)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(5, 'Wednesday')">{{currentSemesterPlannedCourses.get(5)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(5, 'Thursday')">{{currentSemesterPlannedCourses.get(5)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(5, 'Friday')">{{currentSemesterPlannedCourses.get(5)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol">11:00am</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(6, 'Monday')">{{currentSemesterPlannedCourses.get(6)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(6, 'Tuesday')">{{currentSemesterPlannedCourses.get(6)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(6, 'Wednesday')">{{currentSemesterPlannedCourses.get(6)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(6, 'Thursday')">{{currentSemesterPlannedCourses.get(6)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(6, 'Friday')">{{currentSemesterPlannedCourses.get(6)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(7, 'Monday')">{{currentSemesterPlannedCourses.get(7)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(7, 'Tuesday')">{{currentSemesterPlannedCourses.get(7)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(7, 'Wednesday')">{{currentSemesterPlannedCourses.get(7)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(7, 'Thursday')">{{currentSemesterPlannedCourses.get(7)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(7, 'Friday')">{{currentSemesterPlannedCourses.get(7)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol">12:00pm</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(8, 'Monday')">{{currentSemesterPlannedCourses.get(8)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(8, 'Tuesday')">{{currentSemesterPlannedCourses.get(8)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(8, 'Wednesday')">{{currentSemesterPlannedCourses.get(8)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(8, 'Thursday')">{{currentSemesterPlannedCourses.get(8)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(8, 'Friday')">{{currentSemesterPlannedCourses.get(8)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(9, 'Monday')">{{currentSemesterPlannedCourses.get(9)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(9, 'Tuesday')">{{currentSemesterPlannedCourses.get(9)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(9, 'Wednesday')">{{currentSemesterPlannedCourses.get(9)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(9, 'Thursday')">{{currentSemesterPlannedCourses.get(9)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(9, 'Friday')">{{currentSemesterPlannedCourses.get(9)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol">1:00pm</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(10, 'Monday')">{{currentSemesterPlannedCourses.get(10)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(10, 'Tuesday')">{{currentSemesterPlannedCourses.get(10)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(10, 'Wednesday')">{{currentSemesterPlannedCourses.get(10)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(10, 'Thursday')">{{currentSemesterPlannedCourses.get(10)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(10, 'Friday')">{{currentSemesterPlannedCourses.get(10)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(11, 'Monday')">{{currentSemesterPlannedCourses.get(11)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(11, 'Tuesday')">{{currentSemesterPlannedCourses.get(11)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(11, 'Wednesday')">{{currentSemesterPlannedCourses.get(11)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(11, 'Thursday')">{{currentSemesterPlannedCourses.get(11)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(11, 'Friday')">{{currentSemesterPlannedCourses.get(11)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol">2:00pm</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(0, 'Monday')">{{currentSemesterPlannedCourses.get(12)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(12, 'Tuesday')">{{currentSemesterPlannedCourses.get(12)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(12, 'Wednesday')">{{currentSemesterPlannedCourses.get(12)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(12, 'Thursday')">{{currentSemesterPlannedCourses.get(12)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(12, 'Friday')">{{currentSemesterPlannedCourses.get(12)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(13, 'Monday')">{{currentSemesterPlannedCourses.get(13)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(13, 'Tuesday')">{{currentSemesterPlannedCourses.get(13)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(13, 'Wednesday')">{{currentSemesterPlannedCourses.get(13)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(13, 'Thursday')">{{currentSemesterPlannedCourses.get(13)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(13, 'Friday')">{{currentSemesterPlannedCourses.get(13)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol">3:00pm</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+       <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(14, 'Monday')">{{currentSemesterPlannedCourses.get(14)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(14, 'Tuesday')">{{currentSemesterPlannedCourses.get(14)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(14, 'Wednesday')">{{currentSemesterPlannedCourses.get(14)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(14, 'Thursday')">{{currentSemesterPlannedCourses.get(14)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(14, 'Friday')">{{currentSemesterPlannedCourses.get(14)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(15, 'Monday')">{{currentSemesterPlannedCourses.get(15)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(15, 'Tuesday')">{{currentSemesterPlannedCourses.get(15)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(15, 'Wednesday')">{{currentSemesterPlannedCourses.get(15)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(15, 'Thursday')">{{currentSemesterPlannedCourses.get(15)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(15, 'Friday')">{{currentSemesterPlannedCourses.get(15)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol">4:00pm</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(16, 'Monday')">{{currentSemesterPlannedCourses.get(16)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(16, 'Tuesday')">{{currentSemesterPlannedCourses.get(16)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(16, 'Wednesday')">{{currentSemesterPlannedCourses.get(16)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(16, 'Thursday')">{{currentSemesterPlannedCourses.get(16)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(16, 'Friday')">{{currentSemesterPlannedCourses.get(16)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(17, 'Monday')">{{currentSemesterPlannedCourses.get(17)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(17, 'Tuesday')">{{currentSemesterPlannedCourses.get(17)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(17, 'Wednesday')">{{currentSemesterPlannedCourses.get(17)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(17, 'Thursday')">{{currentSemesterPlannedCourses.get(17)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(17, 'Friday')">{{currentSemesterPlannedCourses.get(17)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol">5:00pm</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(18, 'Monday')">{{currentSemesterPlannedCourses.get(18)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(18, 'Tuesday')">{{currentSemesterPlannedCourses.get(18)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(18, 'Wednesday')">{{currentSemesterPlannedCourses.get(18)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(18, 'Thursday')">{{currentSemesterPlannedCourses.get(18)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(18, 'Friday')">{{currentSemesterPlannedCourses.get(18)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(19, 'Monday')">{{currentSemesterPlannedCourses.get(19)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(19, 'Tuesday')">{{currentSemesterPlannedCourses.get(19)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(19, 'Wednesday')">{{currentSemesterPlannedCourses.get(19)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(19, 'Thursday')">{{currentSemesterPlannedCourses.get(19)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(19, 'Friday')">{{currentSemesterPlannedCourses.get(19)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol">6:00pm</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(20, 'Monday')">{{currentSemesterPlannedCourses.get(20)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(20, 'Tuesday')">{{currentSemesterPlannedCourses.get(20)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(20, 'Wednesday')">{{currentSemesterPlannedCourses.get(20)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(20, 'Thursday')">{{currentSemesterPlannedCourses.get(20)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(20, 'Friday')">{{currentSemesterPlannedCourses.get(20)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
       <tr>
         <td class="headcol"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(21, 'Monday')">{{currentSemesterPlannedCourses.get(21)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(21, 'Tuesday')">{{currentSemesterPlannedCourses.get(21)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(21, 'Wednesday')">{{currentSemesterPlannedCourses.get(21)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(21, 'Thursday')">{{currentSemesterPlannedCourses.get(21)}}</div>
+        </td>
+        <td>
+          <div class="event double" *ngIf="isAtTimeAndDay(21, 'Friday')">{{currentSemesterPlannedCourses.get(21)}}</div>
+        </td>
         <td></td>
         <td></td>
       </tr>
