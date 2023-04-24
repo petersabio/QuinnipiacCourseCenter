@@ -23,8 +23,8 @@ public class MessageService implements MessageServiceInterface{
         if(messageDb.isPresent()){
             Message messageUpdate = messageDb.get();
             messageUpdate.setMessageID(message.getMessageID());
-            messageUpdate.setSenderID(message.getSenderID());
-            messageUpdate.setRecieverID(message.getRecieverID());
+            messageUpdate.setStudentName(message.getStudentName());
+            messageUpdate.setAdvisorName(message.getAdvisorName());
             messageUpdate.setMessage(message.getMessage());
 
             messageRepository.save(messageUpdate);
