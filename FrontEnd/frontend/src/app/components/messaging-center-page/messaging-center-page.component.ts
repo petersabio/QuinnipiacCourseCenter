@@ -26,15 +26,17 @@ export class MessagingCenterPageComponent implements OnInit {
    })
   }
 
+  //sends input message to DB
   messageSend(){
     this.message.studentName = localStorage.getItem("activeUser")!;
     this.message.advisorName = "advisor";
     console.log(this.message);
     this.messageService.sendMessage(this.message).subscribe(data =>{
-      location.reload();
+      location.reload();  //reloads page on submit so that new message shows up
     },error=> alert("message not sent"));
   }
 
+  //filters messages by active user and advisor
   filterMessagesByUser(){
     for(var message of this.messages){
       if(message.studentName == this.username || message.studentName == "advisor" && message.advisorName == this.username){
@@ -42,16 +44,5 @@ export class MessagingCenterPageComponent implements OnInit {
       }
     }
   }
-
-  // filterPlannedCoursesByUser() {
-  //   for (var PlannedCourse of this.plannedCourses) {
-  //     if (PlannedCourse.userName == this.username && PlannedCourse.semester != "Freshman" && PlannedCourse.semester != "Sophmore" && PlannedCourse.semester != "Junior" && PlannedCourse.semester != "Senior") {
-  //       this.activeUserPlannedCourses.push(PlannedCourse);
-  //     }
-  //   }
-  //   console.log("active user planned courses");
-  //   console.log(this.activeUserPlannedCourses);
-  // }
-
 
 }
