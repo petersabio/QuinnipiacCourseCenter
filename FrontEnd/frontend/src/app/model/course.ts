@@ -6,6 +6,6 @@ export class Course {
     professor!: string;
     description!: string;
     prereq!: string;
-    days!: number; 
-    time!: number;
+    days!: number;
+    time!: string;
 }
