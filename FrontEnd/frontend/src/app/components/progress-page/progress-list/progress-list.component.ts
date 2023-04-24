@@ -38,12 +38,7 @@ export class ProgressListComponent {
 
     this.username = localStorage.getItem("activeUser")!
 
-    // this.userService.getUsers().subscribe((data: Array<User>) => {
-    //   //console.log(data);
-    //   this.users = data;
-    //   this.username = localStorage.getItem("activeUser")!;
-    //   this.getCurrentUserInfo(this.username);
-    // });
+
 
     this.plannedCourseService.getPlannedCourses().subscribe((data: Array<PlannedCourse>) => {
       this.plannedCourses = data;
