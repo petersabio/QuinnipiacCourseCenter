@@ -33,7 +33,7 @@ export class MessagingCenterPageComponent implements OnInit {
     console.log(this.message);
     this.messageService.sendMessage(this.message).subscribe(data =>{
       location.reload();  //reloads page on submit so that new message shows up
-    },error=> alert("message not sent"));
+    },error=> alert("message not sent")); //error if message not sent
   }
 
   //filters messages by active user and advisor
