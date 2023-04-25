@@ -7,91 +7,34 @@
       <li>
         <i id="aside-icon" class="fa-solid fa-user fa-2xl"></i>
         <div>
-          <h2>Ruby ElKharboutly</h2>
+          <h2>advisor</h2>
           <h3>Advisor</h3>
         </div>
       </li>
     </ul>
   </aside>
   <main>
+    
     <header>
       <i id="main-icon" class="fa-solid fa-user fa-2xl"></i>
       <div>
-        <h2>Ruby ElKharboutly</h2>
+        <h2>advisor</h2>
         <h3>Advisor</h3>
       </div>
     </header>
-    <ul id="chat">
-      <li class="you">
-        <div class="entete">
-          <span class="status gray"></span>
-          <h2>Ruby</h2>
-          <h3>10:12AM, Today</h3>
-        </div>
-        <div class="triangle"></div>
-        <div class="message">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-        </div>
-      </li>
-      <li class="me">
-        <div class="entete">
-          <h3>10:12AM, Today</h3>
-          <h2>Me</h2>
-          <span class="status blue"></span>
-        </div>
-        <div class="triangle"></div>
-        <div class="message">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-        </div>
-      </li>
-      <li class="me">
-        <div class="entete">
-          <h3>10:12AM, Today</h3>
-          <h2>Me</h2>
-          <span class="status blue"></span>
-        </div>
-        <div class="triangle"></div>
-        <div class="message">
-          OK
-        </div>
-      </li>
-      <li class="you">
-        <div class="entete">
-          <span class="status gray"></span>
-          <h2>Ruby</h2>
-          <h3>10:12AM, Today</h3>
-        </div>
-        <div class="triangle"></div>
-        <div class="message">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-        </div>
-      </li>
-      <li class="me">
-        <div class="entete">
-          <h3>10:12AM, Today</h3>
-          <h2>Me</h2>
-          <span class="status blue"></span>
-        </div>
-        <div class="triangle"></div>
-        <div class="message">
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
-        </div>
-      </li>
-      <li class="me">
-        <div class="entete">
-          <h3>10:12AM, Today</h3>
-          <h2>Me</h2>
-          <span class="status blue"></span>
-        </div>
-        <div class="triangle"></div>
-        <div class="message">
-          OK
-        </div>
-      </li>
-    </ul>
+    <div class="items-body">
+      <div class="items-body-content" *ngFor = "let message of activeUserMessages">
+        <p><strong>{{ message.studentName }}</strong><br/>{{ message.message }}</p>
+      </div>
+
+    </div>
     <footer>
-      <textarea placeholder="Type your message"></textarea>
-      <i id="text-icon" class="fa-solid fa-paper-plane fa-xl"></i>
+      <form (ngSubmit) ="messageSend()">
+          <div class="input-group mb-3">
+            <input type="text" autocomplete="off" class="form-control" id="message" name="message" [(ngModel)]="message.message" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-primary" type="submit" id="button-addon2">Send</button>
+          </div>
+      </form>
     </footer>
   </main>
 </div>

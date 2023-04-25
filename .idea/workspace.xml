@@ -5,25 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58fbafdd-1398-4469-970d-ade14810141e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BackEnd/Backend/src/main/java/com/seniorproject/Backend/Controllers/MessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/model/message.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/model/message.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/message.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/message.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/advisees-page/advisees-page.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/advisees-page/advisees-page.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/advisees-page/advisees-page.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/advisees-page/advisees-page.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/course-list/course-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/course-list/course-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/term-calendar/term-calendar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/term-calendar/term-calendar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-list/progress-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-list/progress-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/Backend/src/main/java/com/seniorproject/Backend/entities/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/Backend/src/main/java/com/seniorproject/Backend/entities/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/Backend/src/main/java/com/seniorproject/Backend/services/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/Backend/src/main/java/com/seniorproject/Backend/services/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/messaging-center-page/messaging-center-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/messaging-center-page/messaging-center-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/messaging-center-page/messaging-center-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/messaging-center-page/messaging-center-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/messaging-center-page/messaging-center-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/messaging-center-page/messaging-center-page.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-list/progress-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-list/progress-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/planned-course.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/planned-course.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

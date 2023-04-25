@@ -13,8 +13,8 @@ export class PlannedCourseService {
   constructor(private httpClient: HttpClient) { }
 
   planCourse(course:PlannedCourse): Observable<object>{
-    console.log(course);
-    console.log("test");
+    //console.log(course);
+    //console.log("test");
     return this.httpClient.post(`${this.baseUrl}`,course);
   }
 

@@ -14,10 +14,10 @@ public class Message {
     @Column(name = "messageID")
     @GeneratedValue(strategy =SEQUENCE, generator ="ID_SEQ")
     private int messageID;
-    @Column(name = "senderID")
-    private int senderID;
-    @Column(name = "receiverID")
-    private int recieverID;
+    @Column(name = "studentName")
+    private String studentName;
+    @Column(name = "advisorName")
+    private String advisorName;
     @Column(name = "message")
     private String message;
 
@@ -32,19 +32,19 @@ public class Message {
     }
 
     //senderID
-    public int getSenderID() {
-        return senderID;
+    public String getStudentName() {
+        return studentName;
     }
-    public void setSenderID(int senderID) {
-        this.senderID = senderID;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
     //RecieverID
-    public int getRecieverID() {
-        return recieverID;
+    public String getAdvisorName() {
+        return advisorName;
     }
-    public void setRecieverID(int recieverID) {
-        this.recieverID = recieverID;
+    public void setAdvisorName(String advisorName) {
+        this.advisorName = advisorName;
     }
 
     //Message
