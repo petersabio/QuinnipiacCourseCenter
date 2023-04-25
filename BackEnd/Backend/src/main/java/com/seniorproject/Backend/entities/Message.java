@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 
 import static jakarta.persistence.GenerationType.SEQUENCE;
+
 @Entity
 @Table(name = "MessageTable")
 public class Message {
@@ -39,7 +40,7 @@ public class Message {
         this.studentName = studentName;
     }
 
-    //RecieverID
+    //RecieverID 
     public String getAdvisorName() {
         return advisorName;
     }
