@@ -223,7 +223,7 @@ ul li::marker {
 ul {
   background-color: #0F9FEF;
   margin-right: 10px;
-  
+
 }
 
 
@@ -262,5 +262,16 @@ ul {
 h1 {
   color: #2A2B33;
   margin: 20px;
+}
+
+button {
+  width: 120px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  background-color: #050735;
+}
+
+button:hover {
+  background-color: #5CC2FB;
 }
 

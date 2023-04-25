@@ -21,6 +21,8 @@ export class PlannedCoursesPageComponent {
   advisorId!: number;
   username!: string;
   currentStudent!: string;
+  studentName!: string;
+  student!: User;
   isAdvisor!: Boolean;
 
   constructor(private courseService: courseService, private plannedCourseService: PlannedCourseService, private userService: UserService) {}
@@ -38,6 +40,7 @@ export class PlannedCoursesPageComponent {
         if (user.username == localStorage.getItem("activeUser")!) {
           if (user.usertype == 1) {
             this.isAdvisor = true;
+            this.advisees = new Array<User>();
             this.getAdvisees();
           } else {
             this.isAdvisor = false;
@@ -52,20 +55,14 @@ export class PlannedCoursesPageComponent {
       console.log("advisor id:");
       console.log(this.advisorId);
 
-//       if (this.isAdvisor) {
-//         for (var user of this.users) {
-//           if (user.advisorID == this.advisorId) {
-//             this.advisees.push(user);
-//           }
-//         }
-//       }
       console.log("advisee list: ");
       console.log(this.advisees);
-//       localStorage.setItem("currentStudent", );
-//       this.username = localStorage.getItem("activeUser")!;
     });
 
     this.currentStudent = "all";
+    if (!this.isAdvisor) {
+      this.studentName = localStorage.getItem("activeUser")!;
+    }
   }
 
   getAdvisees() {
@@ -75,7 +72,7 @@ export class PlannedCoursesPageComponent {
 
       if (this.isAdvisor) {
         for (var user of this.users) {
-          if (user.advisorID == this.advisorId) {
+          if (user.advisorID == this.advisorId && user.usertype == 0) {
             this.advisees.push(user);
           }
         }
@@ -85,5 +82,18 @@ export class PlannedCoursesPageComponent {
     });
 
   }
+
+  seeStudentPlannedCoursePage(advisee: User) {
+    this.studentName = advisee.name;
+    this.currentStudent = advisee.username;
+    this.student = advisee;
+    console.log("selected student");
+    console.log(this.student);
+    localStorage.setItem("currentStudent", advisee.username);
+  }
+
+  goBack() {
+    window.location.reload();
+   }
 
 }

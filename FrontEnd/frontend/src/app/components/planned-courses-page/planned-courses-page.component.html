@@ -1,14 +1,25 @@
-<div class="grid-container" *ngIf="!isAdvisor">
+<div class="advisees" *ngIf="isAdvisor&&currentStudent==='all'">
+  <body>
+  <button class="btn btn-primary" *ngFor="let advisee of advisees" (click)="seeStudentPlannedCoursePage(advisee)">
+    {{advisee.name}}
+  </button>
+</body>
+</div>
+<div class="grid-container" *ngIf="!isAdvisor||currentStudent!=='all'">
+  <button class="back-button" *ngIf="isAdvisor" (click)="goBack()">
+    Go Back
+  </button>
   <div class="float-child">
-    <h2>Course List</h2>
+    <h2>{{studentName}}'s Course List</h2>
     <app-course-list></app-course-list>
   </div>
 
   <div class="float-child">
-    <h2>Schedule</h2>
+    <h2>{{studentName}}'s Schedule</h2>
     <app-term-calendar></app-term-calendar>
   </div>
 </div>
+
 
 
 

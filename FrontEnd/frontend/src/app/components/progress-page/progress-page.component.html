@@ -1,11 +1,17 @@
 <!DOCTYPE html>
   <html>
-
-    <head>
-
-    </head>
+    <div class="advisees" *ngIf="isAdvisor&&currentStudent==='all'">
+      <body class="advisees-body">
+        <button class="btn btn-primary" *ngFor="let advisee of advisees" (click)="seeStudentPlannedCoursePage(advisee)">
+          {{advisee.name}}
+        </button>
+      </body>
+    </div>
     <body>
-      <div class="container">
+      <div class="container" *ngIf="!isAdvisor||currentStudent!=='all'">
+        <button class="back-button" *ngIf="isAdvisor" (click)="goBack()">
+          Go Back
+        </button>
         <h1 id='userDisplay'>{{name}}</h1>
         <div class="container1">
           <div class="grid-container">
@@ -28,7 +34,7 @@
             <h3>Sophmore Year</h3>
             <app-progress-list sortBy = "Sophmore"></app-progress-list>
           </div>
-        
+
           <div class="float-child">
             <h3>Junior Year</h3>
             <app-progress-list sortBy = "Junior"></app-progress-list>

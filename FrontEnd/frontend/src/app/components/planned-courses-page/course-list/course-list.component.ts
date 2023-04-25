@@ -29,17 +29,6 @@ export class CourseListComponent {
   username!: String;
 
   ngOnInit() {
-    this.courseService.getCourses().subscribe((data: Course[]) => {
-      console.log(data);
-      this.courses = data;
-    });
-
-    this.plannedCourseService.getPlannedCourses().subscribe((data: Array<PlannedCourse>) => {
-      console.log(data);
-      this.plannedCourses = data;
-      this.activeUserPlannedCourses = new Array<PlannedCourse>();
-      this.filterPlannedCoursesByUser();
-    });
 
     this.userService.getUsers().subscribe((data: Array<User>) => {
       console.log(data);
@@ -48,14 +37,29 @@ export class CourseListComponent {
       this.getCurrentUserInfo(this.username);
     });
 
+    this.pageSetup();
   }
+
+  pageSetup() {
+      this.courseService.getCourses().subscribe((data: Course[]) => {
+        console.log(data);
+        this.courses = data;
+
+        this.plannedCourseService.getPlannedCourses().subscribe((data: Array<PlannedCourse>) => {
+          console.log(data);
+          this.plannedCourses = data;
+          this.activeUserPlannedCourses = new Array<PlannedCourse>();
+          this.filterPlannedCoursesByUser(this.username);
+        });
+      });
+    }
 
   getCurrentUserInfo(username: String) {
     for (var User of this.users) {
       if (User.username == username) {
-        this.loginservice.loginUser(User).subscribe(data => {
-          this.currentUser = data;
-        });
+        if (User.usertype == 1) {
+          this.username = localStorage.getItem("currentStudent")!;
+        }
         break;
       }
     }
@@ -71,13 +75,18 @@ export class CourseListComponent {
     return courseName;
   }
 
-  filterPlannedCoursesByUser() {
+  filterPlannedCoursesByUser(username: String) {
     for (var PlannedCourse of this.plannedCourses) {
+      console.log("planned course username:");
+      console.log(PlannedCourse.userName);
       if (PlannedCourse.userName == this.username && PlannedCourse.semester != "Freshman" && PlannedCourse.semester != "Sophmore" && PlannedCourse.semester != "Junior" && PlannedCourse.semester != "Senior") {
+        console.log("course code:");
+        console.log(PlannedCourse.coursecode);
         this.activeUserPlannedCourses.push(PlannedCourse);
       }
     }
     console.log("active user planned courses");
+    console.log(this.username);
     console.log(this.activeUserPlannedCourses);
   }
 

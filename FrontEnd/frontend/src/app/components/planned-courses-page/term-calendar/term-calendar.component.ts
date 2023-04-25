@@ -21,7 +21,7 @@ export class TermCalendarComponent {
     currentSemesterPlannedCourses!: Map<number, string>;
     currentSemesterPlannedCoursesDays!: Map<number, number>;
     users!: User[];
-    currentUser!: object;
+    currentUser!: string;
     username!: String;
     currentSemester!: String;
     isAtTime!: Array<Boolean>;
@@ -34,20 +34,6 @@ export class TermCalendarComponent {
     constructor(private courseService: courseService, private plannedCourseService: PlannedCourseService, private userService: UserService, private loginservice: LoginserviceService) {}
 
     ngOnInit() {
-      this.courseService.getCourses().subscribe((data: Course[]) => {
-        console.log(data);
-        this.courses = data;
-      });
-
-      this.plannedCourseService.getPlannedCourses().subscribe((data: Array<PlannedCourse>) => {
-        console.log(data);
-        this.plannedCourses = data;
-        this.activeUserPlannedCourses = new Array<PlannedCourse>();
-        this.filterPlannedCoursesByUser();
-        this.currentSemesterPlannedCourses = new Map();
-        this.setUpSchedule();
-
-      });
 
       this.userService.getUsers().subscribe((data: User[]) => {
         console.log(data);
@@ -56,20 +42,40 @@ export class TermCalendarComponent {
         this.getCurrentUserInfo(this.username);
       });
 
+      this.pageSetup();
+    }
+
+//     ngOnChanges() {
+//       this.pageSetup();
+//     }
+
+    pageSetup() {
+      this.courseService.getCourses().subscribe((data: Course[]) => {
+        console.log(data);
+        this.courses = data;
+
+        this.plannedCourseService.getPlannedCourses().subscribe((data: Array<PlannedCourse>) => {
+          console.log(data);
+          this.plannedCourses = data;
+          this.activeUserPlannedCourses = new Array<PlannedCourse>();
+          this.currentSemesterPlannedCourses = new Map();
+          this.filterPlannedCoursesByUser(this.username);
+          this.setUpSchedule();
+
+        });
+      });
+
       this.currentSemester = "Spring";
       this.clearSchedule();
     }
 
-//     ngOnChanges() {
-//       ngOnInit();
-//     }
 
     getCurrentUserInfo(username: String) {
       for (var User of this.users) {
-        if (User.username == username) {
-          this.loginservice.loginUser(User).subscribe(data => {
-            this.currentUser = data;
-          });
+        if (User.username == this.username) {
+          if (User.usertype == 1) {
+            this.username = localStorage.getItem("currentStudent")!;
+          }
           break;
         }
       }
@@ -79,7 +85,7 @@ export class TermCalendarComponent {
       var courseTime = "";
       for (var Course of this.courses) {
         if (Course.coursecode == courseCode) {
-          courseTime = Course.time; // change
+          courseTime = Course.time;
           console.log("course time:");
           console.log(courseTime);
         }
@@ -87,13 +93,18 @@ export class TermCalendarComponent {
       return courseTime;
     }
 
-    filterPlannedCoursesByUser() {
+    filterPlannedCoursesByUser(username: String) {
       for (var PlannedCourse of this.plannedCourses) {
-        if (PlannedCourse.userName == this.username) {
+        console.log("planned course username:");
+        console.log(PlannedCourse.userName);
+        if (PlannedCourse.userName == this.username && PlannedCourse.semester != "Freshman" && PlannedCourse.semester != "Sophmore" && PlannedCourse.semester != "Junior" && PlannedCourse.semester != "Senior") {
+          console.log("course code:");
+          console.log(PlannedCourse.coursecode);
           this.activeUserPlannedCourses.push(PlannedCourse);
         }
       }
       console.log("active user planned courses");
+      console.log(this.username);
       console.log(this.activeUserPlannedCourses);
     }
 
@@ -162,24 +173,52 @@ export class TermCalendarComponent {
                 this.isAtTime[timeCode] = true;
                 if (Course.days == 1) {
                   this.isOnMonday[timeCode] = true;
+                  this.isOnTuesday[timeCode] = false;
+                  this.isOnWednesday[timeCode] = false;
+                  this.isOnThursday[timeCode] = false;
+                  this.isOnFriday[timeCode] = false;
                 } else if (Course.days == 2) {
+                  this.isOnMonday[timeCode] = false;
                   this.isOnTuesday[timeCode] = true;
+                  this.isOnWednesday[timeCode] = false;
+                  this.isOnThursday[timeCode] = false;
+                  this.isOnFriday[timeCode] = false;
                 } else if (Course.days == 3) {
+                  this.isOnMonday[timeCode] = false;
+                  this.isOnTuesday[timeCode] = false;
                   this.isOnWednesday[timeCode] = true;
+                  this.isOnThursday[timeCode] = false;
+                  this.isOnFriday[timeCode] = false;
                 } else if (Course.days == 4) {
+                  this.isOnMonday[timeCode] = false;
+                  this.isOnTuesday[timeCode] = false;
+                  this.isOnWednesday[timeCode] = false;
                   this.isOnThursday[timeCode] = true;
+                  this.isOnFriday[timeCode] = false;
                 } else if (Course.days == 5) {
+                  this.isOnMonday[timeCode] = false;
+                  this.isOnTuesday[timeCode] = false;
+                  this.isOnWednesday[timeCode] = false;
+                  this.isOnThursday[timeCode] = false;
                   this.isOnFriday[timeCode] = true;
                 } else if (Course.days == 6) {
+                  this.isOnMonday[timeCode] = false;
                   this.isOnTuesday[timeCode] = true;
+                  this.isOnWednesday[timeCode] = false;
                   this.isOnThursday[timeCode] = true;
+                  this.isOnFriday[timeCode] = false;
                 } else if (Course.days == 7) {
                   this.isOnMonday[timeCode] = true;
+                  this.isOnTuesday[timeCode] = false;
                   this.isOnWednesday[timeCode] = true;
+                  this.isOnThursday[timeCode] = false;
+                  this.isOnFriday[timeCode] = false;
                 } else if (Course.days == 8) {
                   this.isOnMonday[timeCode] = true;
+                  this.isOnTuesday[timeCode] = false;
                   this.isOnWednesday[timeCode] = true;
                   this.isOnFriday[timeCode] = true;
+                  this.isOnThursday[timeCode] = false;
                 }
               }
 

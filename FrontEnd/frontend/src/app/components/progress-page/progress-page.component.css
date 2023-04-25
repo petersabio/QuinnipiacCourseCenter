@@ -67,193 +67,6 @@ body {
   text-align: left;
 }
 
-.progress {
-  padding: 4px;
-  margin: 10px;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-}
-
-.progress-bar {
-  width: 79%;
-  height: 16px;
-  border-radius: 4px;
-	background-color: #0F9FEF;
-}
-
-.progress2 {
-  padding: 4px;
-  margin: 2px;
-  background: rgba(0, 0, 0, 0.25);
-  border-radius: 6px;
-}
-
-.progress-bar2 {
-  height: 16px;
-  border-radius: 4px;
-	background-color: #0F9FEF;
-}
-
-#university-curriculum-breadth-requirements:checked ~ .progress2 > .progress-bar2 {
-  width: 100%;
-  background-color: #0F9FEF;
-}
-
-#university-curriculum-breadth-requirements:checked ~ .toBeReplaced:after {
-  visibility: visible;
-  position: absolute;
-  content: "5 out of 5 items";
-}
-
-#university-curriculum-breadth-requirements:checked ~ .first-requirements {
-  visibility: visible;
-  position: absolute;
-  width : 91.5%;
-}
-
-#intercultural-understanding:checked ~ .progress2 > .progress-bar2 {
-  width: 100%;
-  background-color: #0F9FEF;
-}
-
-#intercultural-understanding:checked ~ .toBeReplaced:after {
-  visibility: visible;
-  position: absolute;
-  content: "1 out of 1 item";
-}
-
-#major-requirements:checked ~ .progress2 > .progress-bar2 {
-  width: 66%;
-  background-color: #0F9FEF;
-}
-
-#major-requirements:checked ~ .toBeReplaced:after {
-  visibility: visible;
-  position: absolute;
-  content: "2 out of 3 items";
-}
-
-#free-electives:checked ~ .progress2 > .progress-bar2 {
-  width: 0%;
-  background-color: #0F9FEF;
-}
-
-#free-electives:checked ~ .toBeReplaced:after {
-  visibility: visible;
-  position: absolute;
-  content: "0 out of 1 item";
-}
-
-#other-courses:checked ~ .progress2 > .progress-bar2 {
-  width: 100%;
-  background-color: #0F9FEF;
-}
-
-#other-courses:checked ~ .toBeReplaced:after {
-  visibility: visible;
-  position: absolute;
-  content: "1 out of 1 item";
-}
-
-.toBeReplaced {
-  visibility: hidden;
-  position: relative;
-  color: #fff;
-  text-align: center;
-}
-
-.first-requirements {
-  visibility: hidden;
-  position: relative;
-}
-
-.radio {
-  display: none;
-}
-
-.label {
-  display: inline-block;
-  margin: 0 5px 20px;
-  padding: 3px 8px;
-  color: #aaa;
-  text-shadow: 0 1px black;
-  border-radius: 3px;
-  cursor: pointer;
-}
-
-.radio:checked + .label {
-  color: white;
-  background: rgba(0, 0, 0, 0.25);
-}
-
-.collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-
-
-li a {text-decoration : none; color : #2d2f31;}
-
-
-nav {
-  width : 100%;
-  background: #d9d9d9;
-  margin : 40px auto;
-  border-radius: 8px;
-}
-
-.dropdown {
-  width: 100%
-}
-
-label {
-  height: 10px;
-}
-
-span {
-  padding : 30px;
-  background : #2d2f31;
-  color : white;
-  font-size : 1.2em;
-  font-variant : small-caps;
-  cursor : pointer;
-  display: block;
-}
-
-span::after {
-  float: right;
-  right: 10%;
-  content: "+";
-}
-
-.slide {
-  clear:both;
-  width:100%;
-  height:0px;
-  overflow: hidden;
-  list-style: none;
-  text-align: center;
-}
-
-
 h3 {
   font-weight: bold;
   color: #0F9FEF;
@@ -264,16 +77,43 @@ h3 {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-row-gap: 50px;
-  
-  
 }
 
 
-.slide li {padding : 30px;}
+.advisees-body {
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  margin: 75px 300px 50px 300px;
+  background-color: #1F1F23;
+}
 
-#touch1, #touch2 {position: absolute; opacity: 0; height: 0px;}
+button {
+  display: block;
+  width: 100%;
+  background-color: #050735;
+  color: #D4D4DA;
+  font-size: 35px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+}
 
-#touch1, #touch2:checked + .slide {height: 300px;}
+button:hover {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.24), 0 10px 25px 0 rgba(0,0,0,0.19);
+  background-color: #0F9FEF;
+}
+
+.back-button{
+  grid-column: span 3;
+  width: 800px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  margin-left: 20%;
+  align-self: center;
+}
 
 
 

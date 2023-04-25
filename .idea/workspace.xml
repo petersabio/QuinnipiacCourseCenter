@@ -6,12 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="58fbafdd-1398-4469-970d-ade14810141e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/advisees-page/advisees-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/advisees-page/advisees-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/advisees-page/advisees-page.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/advisees-page/advisees-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/course-catalog-page/course-catalog-page.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/course-list/course-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/course-list/course-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/planned-courses-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/term-calendar/term-calendar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/term-calendar/term-calendar.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/term-calendar/term-calendar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/planned-courses-page/term-calendar/term-calendar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/model/course.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/model/course.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-list/progress-list.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-list/progress-list.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-list/progress-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-list/progress-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/progress-page/progress-page.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,17 +48,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.smartKeys"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.smartKeys&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

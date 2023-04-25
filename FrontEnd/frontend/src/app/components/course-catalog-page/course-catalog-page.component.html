@@ -76,41 +76,39 @@
             <p *ngIf="popupCourse.days===7">M/W {{popupCourse.time}}</p>
             <p *ngIf="popupCourse.days===8">M/W/F {{popupCourse.time}}</p>
             <p>{{popupCourse.professor}}</p>
-            <div>
 
-            </div>
+            <button type="submit" class="btn btn-primary" (click)="addCourseToCourseList()" >Add Course</button>
+
             <div class="form-check">
               <input class="form-check-input" type="radio" name="Year" id="Freshman" value ="Freshman" (change)="radioChangeHandler($event)">
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label class="form-check-label" >
                 Freshman
               </label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="Year" id="Sophmore" value ="Sophmore" (change)="radioChangeHandler($event)">
-              <label class="form-check-label" for="flexRadioDefault2" >
+              <label class="form-check-label"  >
                 Sophmore
               </label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="Year" id="Junior" value ="Junior" (change)="radioChangeHandler($event)">
-              <label class="form-check-label" for="flexRadioDefault3" >
+              <label class="form-check-label"  >
                 Junior
               </label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="Year" id="Senior"value ="Senior" (change)="radioChangeHandler($event)">
-              <label class="form-check-label" for="flexRadioDefault4">
+              <label class="form-check-label" >
                 Senior
               </label>
             </div>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="Year" id="Now"value ="Now" (change)="radioChangeHandler($event)">
-              <label class="form-check-label" for="flexRadioDefault4">
+              <label class="form-check-label" >
                 Now
               </label>
             </div>
-            
-            <button type="submit" class="btn btn-primary" (click)="addCourseToCourseList()" >Add Course</button>
 
           </li>
         </ul>

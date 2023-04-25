@@ -15,7 +15,6 @@ import { CourseListComponent } from './components/planned-courses-page/course-li
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { CourseCatalogPageComponent } from './components/course-catalog-page/course-catalog-page.component';
 import { MessagingCenterPageComponent } from './components/messaging-center-page/messaging-center-page.component';
-import { AdviseesPageComponent } from './components/advisees-page/advisees-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { courseService } from './service/course-service.service';
 import { PlannedCourseService } from './service/planned-course.service';
@@ -37,7 +36,6 @@ import { ProgressListComponent } from './components/progress-page/progress-list/
     LoginPageComponent,
     CourseCatalogPageComponent,
     MessagingCenterPageComponent,
-    AdviseesPageComponent,
     CourseSearchFormComponent,
     ProgressListComponent
   ],
