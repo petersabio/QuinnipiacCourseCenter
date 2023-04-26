@@ -194,10 +194,11 @@ main header h3{
 }
 
 footer {
-	position: fixed;
+	min-height: 100vh;
+	margin-top: auto;
 	bottom: 0;
 	right: 9%;
-	left: 23%;
+	left: 20%;
 	display: grid;
 	grid-template-columns: 90% 10%;
 }
