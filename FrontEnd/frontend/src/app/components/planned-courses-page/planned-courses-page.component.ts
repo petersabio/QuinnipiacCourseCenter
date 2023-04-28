@@ -93,7 +93,7 @@ export class PlannedCoursesPageComponent {
   }
 
   goBack() {
-    window.location.reload();
+    this.currentStudent = "all";
    }
 
 }

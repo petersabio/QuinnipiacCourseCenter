@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { User } from 'src/app/model/user';
 import { CreateAccountService } from 'src/app/service/create-account.service';
 import { LoginserviceService } from 'src/app/service/loginservice.service';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-login-page',
@@ -12,11 +13,12 @@ import { LoginserviceService } from 'src/app/service/loginservice.service';
 export class LoginPageComponent {
 
   user:User = new User();
+  users!: Array<User>;
 
   public togglePanel: String = "left-active";
 
-  constructor(private router: Router, private loginservice: LoginserviceService, private createAccountService: CreateAccountService ) { }
-  
+  constructor(private router: Router, private loginservice: LoginserviceService, private createAccountService: CreateAccountService, private userService: UserService) { }
+
 
   loginPanelTrigger() {
     this.togglePanel = "left-active";
@@ -27,10 +29,27 @@ export class LoginPageComponent {
   }
 
   userLogin(){
-    console.log(this.user)
+    console.log("logged in user");
+    console.log(this.user);
+    console.log("logged in user name");
+    console.log(this.user.username);
     this.loginservice.loginUser(this.user).subscribe(data=>{
       alert("login success")
-      this.router.navigate(['home']);
+      this.userService.getUsers().subscribe((data: Array<User>) => {
+        console.log(data);
+        this.users = data;
+        for (var User of this.users) {
+          if (User.username == this.user.username) {
+            if (User.usertype != 2) {
+              this.loginservice.displayNavBar();
+              this.router.navigate(['home']);
+            } else {
+              this.router.navigate(['admin']);
+            }
+          }
+        }
+      });
+
       localStorage.setItem('activeUser',this.user.username);
     },error=>{
       alert("login Failed Please Make Sure Username and Password are Correct")

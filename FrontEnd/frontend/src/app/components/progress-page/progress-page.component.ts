@@ -122,7 +122,7 @@ export class ProgressPageComponent {
    }
 
    goBack() {
-    window.location.reload();
+    this.currentStudent = "all";
    }
 
 
