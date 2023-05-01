@@ -275,3 +275,7 @@ button:hover {
   background-color: #5CC2FB;
 }
 
+.form-check {
+  width: 50px;
+}
+

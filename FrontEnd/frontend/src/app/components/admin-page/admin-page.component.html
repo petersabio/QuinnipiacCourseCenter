@@ -1,9 +1,9 @@
 <html>
 <head></head>
  <body>
-    <div style="width: 100%;">
-        <div style="width: 50%; height: 450px; float: left; background: #0F9FEF;"> 
-            Add Course 
+    <div class="container">
+        <div class="addCourseContainer">
+            <h1>Add Course</h1>
             <form (ngSubmit)="addCourse()">
                 <input type="text" autocomplete="off" class="form-control" id="ID" placeholder="CourseCode" name="coursecode" [(ngModel)] = "course.coursecode">
                 <input type="text" autocomplete="off" class="form-control" id="Name" placeholder="CourseName" name="coursename" [(ngModel)] = "course.coursename">
@@ -14,14 +14,14 @@
                 <input type="text" autocomplete="off" class="form-control" id="Professor" placeholder="Professor" name="professor" [(ngModel)] = "course.professor">
                 <input type="text" autocomplete="off" class="form-control" id="Section" placeholder="Section" name="section" [(ngModel)] = "course.section">
                 <input type="text" autocomplete="off" class="form-control" id="Time" placeholder="Time" name="time" [(ngModel)] = "course.time">
-                <button type="submit" class="btn btn-primary">Add Course</button>
+                <button type="submit" class="btn btn-primary add-button">Add Course</button>
             </form>
         </div>
-        <div style="margin-left: 50%; height: 450px; background: #FFFFFF;"> 
-            Remove Course
+        <div class="removeCourseContainer">
+            <h1>Remove Course</h1>
             <form (ngSubmit)="removeCourse()">
                 <input type="text" autocomplete="off" class="form-control" id="removeCode" placeholder="Course_Code" name="addCode" [(ngModel)] = "course.coursecode">
-                <button type="submit" class="btn btn-primary">Remove Course</button>
+                <button type="submit" class="btn btn-primary remove-button">Remove Course</button>
             </form>
         </div>
     </div>

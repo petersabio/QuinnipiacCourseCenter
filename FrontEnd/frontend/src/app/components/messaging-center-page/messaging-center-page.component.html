@@ -14,7 +14,7 @@
     </ul>
   </aside>
   <main>
-    
+
     <header>
       <i id="main-icon" class="fa-solid fa-user fa-2xl"></i>
       <div>
@@ -24,15 +24,19 @@
     </header>
     <div class="items-body">
       <div class="items-body-content" *ngFor = "let message of activeUserMessages">
-        <p><strong>{{ message.studentName }}</strong><br/>{{ message.message }}</p>
+        <div *ngIf="message.studentName===this.username">
+          <p class="me"><strong>{{ message.studentName }}</strong><br/>{{ message.message }}</p>
+        </div>
+        <div *ngIf="message.studentName!==this.username">
+          <p class="you"><strong>{{ message.studentName }}</strong><br/>{{ message.message }}</p>
+        </div>
       </div>
-
     </div>
     <footer>
       <form (ngSubmit) ="messageSend()">
           <div class="input-group mb-3">
             <input type="text" autocomplete="off" class="form-control" id="message" name="message" [(ngModel)]="message.message" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-primary" type="submit" id="button-addon2">Send Message</button>
+            <button class="btn btn-primary send-message" type="submit" id="button-addon2">Send Message</button>
           </div>
       </form>
     </footer>
