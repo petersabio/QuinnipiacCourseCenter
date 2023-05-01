@@ -1,1 +1,29 @@
-<p>admin-page works!</p>
+<html>
+<head></head>
+ <body>
+    <div style="width: 100%;">
+        <div style="width: 50%; height: 450px; float: left; background: #0F9FEF;"> 
+            Add Course 
+            <form (ngSubmit)="addCourse()">
+                <input type="text" autocomplete="off" class="form-control" id="ID" placeholder="CourseCode" name="coursecode" [(ngModel)] = "course.coursecode">
+                <input type="text" autocomplete="off" class="form-control" id="Name" placeholder="CourseName" name="coursename" [(ngModel)] = "course.coursename">
+                <input type="text" autocomplete="off" class="form-control" id="Days" placeholder="Days" name="days" [(ngModel)] = "course.days">
+                <input type="text" autocomplete="off" class="form-control" id="Description" placeholder="Description" name="description" [(ngModel)] = "course.description">
+                <input type="text" autocomplete="off" class="form-control" id="OfferingSemester" placeholder="Offering Semester" name="offsemester" [(ngModel)] = "course.offsemester">
+                <input type="text" autocomplete="off" class="form-control" id="PreReq" placeholder="Pre Reqs" name="prereq" [(ngModel)] = "course.prereq">
+                <input type="text" autocomplete="off" class="form-control" id="Professor" placeholder="Professor" name="professor" [(ngModel)] = "course.professor">
+                <input type="text" autocomplete="off" class="form-control" id="Section" placeholder="Section" name="section" [(ngModel)] = "course.section">
+                <input type="text" autocomplete="off" class="form-control" id="Time" placeholder="Time" name="time" [(ngModel)] = "course.time">
+                <button type="submit" class="btn btn-primary">Add Course</button>
+            </form>
+        </div>
+        <div style="margin-left: 50%; height: 450px; background: #FFFFFF;"> 
+            Remove Course
+            <form (ngSubmit)="removeCourse()">
+                <input type="text" autocomplete="off" class="form-control" id="removeCode" placeholder="Course_Code" name="addCode" [(ngModel)] = "course.coursecode">
+                <button type="submit" class="btn btn-primary">Remove Course</button>
+            </form>
+        </div>
+    </div>
+ </body>
+</html>
