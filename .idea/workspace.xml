@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58fbafdd-1398-4469-970d-ade14810141e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/Backend/src/main/java/com/seniorproject/Backend/Controllers/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/Backend/src/main/java/com/seniorproject/Backend/Controllers/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/loginservice.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/loginservice.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/admin-page/admin-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/admin-page/admin-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/admin-page/admin-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/admin-page/admin-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/login-page/login-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/components/login-page/login-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/course-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/frontend/src/app/service/course-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

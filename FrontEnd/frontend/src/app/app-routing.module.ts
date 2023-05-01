@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: 'progress', component: ProgressPageComponent },
   { path: 'course-catalog', component: CourseCatalogPageComponent },
   { path: 'messaging-center', component: MessagingCenterPageComponent },
-  { path: 'admin', component: AdminPageComponent },
+  { path: 'admin', component: AdminPageComponent }
 ];
 
 @NgModule({

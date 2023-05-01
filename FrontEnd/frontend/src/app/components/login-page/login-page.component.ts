@@ -41,7 +41,7 @@ export class LoginPageComponent {
         for (var User of this.users) {
           if (User.username == this.user.username) {
             if (User.usertype != 2) {
-              this.loginservice.displayNavBar();
+              //this.loginservice.displayNavBar();
               this.router.navigate(['home']);
             } else {
               this.router.navigate(['admin']);
